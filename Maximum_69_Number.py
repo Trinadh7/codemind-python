@@ -1,6 +1,6 @@
 n=int(input())
 a=[]
-while (n):
+while(n):
     d=n%10
     a.append(d)
     n=n//10
