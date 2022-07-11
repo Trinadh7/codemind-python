@@ -1,17 +1,15 @@
-def rev(a):
-    re=0
-    while a>0:
-        r=a%10
-        re=(re*10)+r
-        a//=10
-    return re
-a=int(input())
-c=0
-if a<0:
-    c=1
-    a*=-1
-res=rev(a)
-if c==1:
-    print(res*-1)
+n=int(input())
+rev=0
+t=n
+k=0
+if(n<0):
+    n=n*(-1)
+while(n!=0):
+    d=n%10
+    rev=rev*10+d
+    n=n//10
+if(t<0):
+ k=rev-(rev*2)
+ print(k)
 else:
-    print(res)
+    print(rev)
