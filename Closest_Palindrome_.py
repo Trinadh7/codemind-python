@@ -1,28 +1,26 @@
-def rev(a):
-    s=0
-    while a>0:
-        rem=a%10
-        s=(s*10)+rem
-        a//=10
-    return s
-a=int(input())
-p1=0
-p2=0
-d1=0
-d2=0
-for i in range(a-1,0,-1):
-    if rev(i)==i:
-        p1=i
-        d1=a-i
+def pal(n):
+   t=n
+   a=0 
+   while(n):
+       d=n%10
+       a=a*10+d
+       n=n//10
+   if  (a==t):
+         return 1
+   else:
+        return 0
+n= int(input())
+for i in range(n+1,100000):
+    if pal(i):
+        a=i
         break
-for i in range(a+1,10000):
-    if rev(i)==i:
-        p2=i
-        d2=i-a
+for i in range(n-1,0,-1):
+    if pal(i):
+        a1=i
         break
-if d1==d2:
-    print(p1,p2)
-elif d1>d2:
-    print(p2)
-elif d1<d2:
-    print(p1)
+if abs(a1-n)==abs(a-n):
+    print(a1,a)
+elif abs(a1-n)<abs(a-n):
+    print(a1)    
+else:
+    print(a)
