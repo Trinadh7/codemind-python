@@ -1,20 +1,18 @@
-def rev(a):
-    s=0
-    while a>0:
-        rem=a%10
-        s=(s*10)+rem
-        a//=10
-    return s
 a=int(input())
-arev=rev(a)
-su=0
-j=1
-while arev>0:
-    rem=arev%10
-    su+=rem**j
-    j+=1
-    arev//=10
-if su==a:
-    print("True")
+c=0
+t=a
+p=a
+k=0
+while a:
+    d=a%10
+    c+=1
+    a=a//10
+while t:
+    d=t%10
+    k=k+d**c
+    c-=1
+    t=t//10
+if p==k:
+  print("True")
 else:
     print("False")
